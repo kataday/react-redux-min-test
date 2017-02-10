@@ -1,0 +1,34 @@
+{
+  "name": "react-redux-min",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run build && npm run start:prod || npm run start:dev",
+    "start:dev": "webpack-dev-server --inline --content-base www/ --history-api-fallback",
+    "start:prod": "echo \"Error: no start:prod specified\" && exit 1",
+    "build:client": "webpack",
+    "build": "npm run build:client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "if-env": "^1.0.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0",
+    "reselect": "^2.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
